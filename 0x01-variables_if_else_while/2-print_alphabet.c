@@ -1,37 +1,20 @@
-include <stdio.h>
-
+#include <stdio.h>
 #include <stdlib.h>
 
-
-
 /**
+ * main - returns alphabets
  *
- *  * main - returns alphabets
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
-
+ * Return: Always 0 (Success)
+ */
 int main(void)
-
 {
+	int ch = 'a';
 
-		int ch = 'a';
-
-
-
-			while (ch <= 'z')
-
-					{
-
-								putchar(ch);
-
-										ch++;
-
-											}
-
-				putchar('\n');
-
-					return (0);
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
+	putchar('\n');
+	return (0);
+}

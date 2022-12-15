@@ -1,29 +1,18 @@
 #include "main.h"
 
-
-
 /**
- *
- *  * main - check the code
- *
- *   *
- *
- *    * Return: Always 0.
- *
- *     */
+ * print_line - prints line
+ * @n: param
+ */
 
-int main(void)
-
+void print_line(int n)
 {
+	int i = 1;
 
-	    print_line(0);
-
-	        print_line(2);
-
-		    print_line(10);
-
-		        print_line(-4);
-
-			    return (0);
-
+	while (i <=  n)
+	{
+		_putchar(95);
+		i++;
+	}
+	_putchar('\n');
 }

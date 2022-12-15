@@ -1,29 +1,18 @@
 #include "main.h"
 
 /**
- * print_diagonal - print slash
- * @n: params
+ * print_line - prints line
+ * @n: param
  */
 
-void print_diagonal(int n)
+void print_line(int n)
 {
-	int i = 0;
-	int j;
+	int i = 1;
 
-	if (n > 0)
+	while (i <=  n)
 	{
-		for (; i < n; i++)
-		{
-			for (j = 0; j < i; j++)
-			{
-				_putchar(' ');
-			}
-			_putchar(92);
-			_putchar('\n');
-		}
+		_putchar(95);
+		i++;
 	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }

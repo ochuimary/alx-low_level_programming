@@ -1,37 +1,22 @@
-#include "main.h"
-
-
+include "main.h"
 
 /**
- *
- *  * _isdigit - checks for digits
- *
- *   * @c: parameter
- *
- *    * Return: 0 or 1
- *
- *     */
+ * _isupper - checks uppercase
+ * @c: parameter
+ * Return: 0 if successful
+ */
 
-
-
-int _isdigit(int c)
-
+int _isupper(int c)
 {
-
-		if (c >= 48 && c < 58)
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
+	if (c >= 65 && c < 91)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
 									}
 
 }

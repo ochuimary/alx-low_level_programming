@@ -1,36 +1,23 @@
-#include <stdio.h>
 #include "main.h"
+#define NULL 0
 
 /**
- * _atoi - function converts string to an integer
- * @s: Pointer parameter
- * Return: returns an integer value
- */
-int _atoi(char *s)
+* _strchr - locate 1st occurrence of char in string and returns pointer there
+* @s: string to search
+* @c: target characer
+* Return: pointer to that character in string
+*/
+
+char *_strchr(char *s, char c)
 {
-	unsigned int count = 0, size = 0, j = 0, k = 1, m = 1, i;
+	int i = 0;
 
-	while (*(s + count) != '\0')
-	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
 
-		if (*(s + count) == '-')
-			k *= -1;
+	if (s[i] == c)
+		return (&s[i]);
 
-		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
-		{
-			if (size > 0)
-				m *= 10;
-			size++;
-		}
-		count++;
-	}
-
-	for (i = count - size; i < count; i++)
-	{
-		j = j + ((*(s + i) - 48) * m);
-		m /= 10;
-	}
-	return (j * k);
+	else
+		return (NULL);
 }
